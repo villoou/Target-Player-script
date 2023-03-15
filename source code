@@ -1,0 +1,8 @@
+local playerToTrack = "USERNAME" -- replace USERNAME with the username of the player you want to track
+local trackedPlayer = game:GetService("Players"):FindFirstChild(playerToTrack)
+while wait() do
+    if trackedPlayer.Character and trackedPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        local pos = trackedPlayer.Character.HumanoidRootPart.Position
+        print(playerToTrack .. " is at position (" .. pos.X .. ", " .. pos.Y .. ", " .. pos.Z .. ")")
+    end
+end
